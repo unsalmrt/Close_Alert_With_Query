@@ -1,0 +1,28 @@
+group 'com.opsgenie'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'CloseWithQuery'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile("org.json:json:20141113")
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'javax.activation:activation:1.1.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+}
