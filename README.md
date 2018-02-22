@@ -11,5 +11,5 @@ java -jar closeAlertwithQuery-all-1.0.jar "YOUR_API_KEY" "QUERY"
 IMPORTANT : 
 
  - Make sure you give arguments(both apiKey and query) into quotation marks. 
- - Since there is no re-open alert functionality please double check if your query is valid on alerts page and make sure it lists the correct set of alerts on alerts page. 
+ - Since there is no re-open alert functionality please double check if your query is valid  and make sure it lists the correct set of alerts on alerts page. (Select "All" as a search filter from left menu and change to "All Time" on seaarch bar.)
 
