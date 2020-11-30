@@ -1,11 +1,11 @@
-# Close alerts by using queries 
+# Bulk close Opsgenie alerts by using search queries 
 
-Script runs the given query and retrieves 20 alerts in every loop and waits for 10 seconds before passing to the next iteration. 
+Script runs the given query and retrieves 20 alerts in every iteration and waits for 10 seconds before passing to the next iteration. 
 
 
 ### Compiling format on command line (should first go to the directory where the jar file exists)
 
-java -jar closeAlertwithQuery-all-1.0.jar "YOUR_API_KEY" "QUERY"
+java -jar closeAlertwithQuery-all-1.0.jar "YOUR_API_KEY" "YOUR_SEARCH_QUERY"
 
 
 IMPORTANT : 
